@@ -1,0 +1,142 @@
+/* Configurações Globais e Cores da Matos Tecnologias */
+:root {
+    --primary: #2563eb;
+    --primary-hover: #1d4ed8;
+    --bg: #f8fafc;
+    --card: #ffffff;
+    --text: #1e293b;
+    --footer-text: #888;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    display: flex;
+    flex-direction: column; /* Ajustado para o rodapé ficar embaixo */
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container { 
+    width: 95%; 
+    max-width: 500px; 
+    text-align: center; 
+    flex-grow: 1; /* Faz o conteúdo empurrar o rodapé para o fim */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Tipografia e Logo */
+.logo { font-size: 3.5rem; margin-bottom: 10px; }
+h1 { font-weight: 800; margin: 0; color: var(--primary); }
+
+/* Card Principal */
+.card {
+    background: var(--card);
+    padding: 30px;
+    border-radius: 24px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    margin-top: 25px;
+}
+
+/* Área de Upload */
+.drop-zone {
+    border: 3px dashed #cbd5e1;
+    border-radius: 16px;
+    padding: 40px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    background: #f1f5f9;
+}
+
+.drop-zone:hover { border-color: var(--primary); background: #eff6ff; }
+.drop-msg { font-weight: 600; opacity: 0.6; font-size: 0.9rem; }
+
+/* Preview da Imagem (Correção da Matos Tecnologias) */
+.image-wrapper {
+    width: 100%;
+    max-height: 300px;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f9f9f9;
+}
+
+#image-preview {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Barra de Progresso */
+#progress-container { margin: 20px 0; text-align: left; }
+.progress-label { font-size: 0.85rem; font-weight: 600; margin-bottom: 8px; color: var(--primary); }
+.progress-bar-bg { width: 100%; height: 12px; background: #e2e8f0; border-radius: 10px; overflow: hidden; }
+#progress-fill { width: 0%; height: 100%; background: linear-gradient(90deg, var(--primary), #60a5fa); border-radius: 10px; transition: width 0.3s ease; }
+
+/* Botão de Ação */
+.btn-convert {
+    display: block;
+    width: 100%;
+    padding: 18px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-convert:hover { background: var(--primary-hover); transform: translateY(-2px); box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3); }
+
+.hidden { display: none !important; }
+
+/* --- Rodapé Institucional Matos Tecnologias --- */
+.main-footer {
+    width: 100%;
+    padding: 40px 0;
+    margin-top: auto; /* Garante que fique no fim da página */
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    background: #ffffff;
+    color: var(--footer-text);
+    font-size: 0.9rem;
+}
+
+.footer-content { max-width: 600px; margin: 0 auto; text-align: center; }
+.footer-brand { display: flex; flex-direction: column; align-items: center; margin-bottom: 15px; }
+
+.brand-m {
+    font-family: serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--text);
+    border: 2px solid var(--text);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.footer-brand p { font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--text); margin: 0; }
+.copyright { opacity: 0.6; margin-bottom: 15px; }
+
+.footer-nav a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: 0.3s;
+    margin: 0 8px;
+    font-weight: 600;
+}
+
+.footer-nav a:hover { text-decoration: underline; filter: brightness(1.2); }
